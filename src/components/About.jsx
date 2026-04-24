@@ -3,8 +3,8 @@ import { FiMapPin, FiBookOpen, FiTerminal } from 'react-icons/fi'
 
 const highlights = [
   { Icon: FiMapPin, label: 'Boston, MA' },
-  { Icon: FiBookOpen, label: 'Northeastern University — IT (2026)' },
-  { Icon: FiTerminal, label: 'Bunker Hill Community College — CS (2024)' },
+  { Icon: FiBookOpen, label: 'Northeastern University, IT (2026)' },
+  { Icon: FiTerminal, label: 'Bunker Hill Community College, CS (2024)' },
 ]
 
 const interests = ['Backend', 'Cloud', 'Databases', 'AI / ML', 'Analytics', 'Networking']
@@ -44,7 +44,7 @@ export default function About() {
                 with a Computer Science foundation from Bunker Hill Community College.
               </p>
               <p>
-                My focus is backend systems, cloud infrastructure, databases, and applied AI — areas
+                My focus is backend systems, cloud infrastructure, databases, and applied AI areas
                 where thoughtful engineering creates measurable impact. I care about writing code
                 that's functional, maintainable, and built to scale.
               </p>

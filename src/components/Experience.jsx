@@ -5,7 +5,7 @@ const education = [
   {
     institution: 'Northeastern University',
     degree: 'B.S. Information Technology',
-    period: '2024 — 2026',
+    period: '2024 to 2026',
     location: 'Boston, MA',
     tag: 'Expected May 2026',
     tagColor: 'indigo',
@@ -17,7 +17,7 @@ const education = [
   {
     institution: 'Bunker Hill Community College',
     degree: 'A.S. Computer Science',
-    period: '2022 — 2024',
+    period: '2022 to 2024',
     location: 'Boston, MA',
     tag: 'Graduated 2024',
     tagColor: 'emerald',

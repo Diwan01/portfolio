@@ -5,8 +5,8 @@ const contacts = [
   {
     Icon: FiMail,
     label: 'Email',
-    display: 'bhandari.diw@northeastern.edu',
-    href: 'mailto:bhandari.diw@northeastern.edu',
+    display: 'bhandaridiwan427@gmail.com',
+    href: 'mailto:bhandaridiwan427@gmail.com',
     external: false,
   },
   {
@@ -64,7 +64,7 @@ export default function Contact() {
           </div>
 
           <motion.a
-            href="mailto:bhandari.diw@northeastern.edu"
+            href="mailto:bhandaridiwan427@gmail.com"
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
