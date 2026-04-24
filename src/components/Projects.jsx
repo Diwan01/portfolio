@@ -6,8 +6,8 @@ const projects = [
     num: '01',
     title: 'Awn Creel: Digital Pattern Platform',
     description:
-      'Architected an end-to-end digital marketplace where independent craft designers publish, license, and sell downloadable pattern assets, featuring Stripe-integrated checkout, automated license enforcement, and a Supabase-backed catalog with row-level security policies.',
-    tech: ['React', 'Node.js', 'Supabase', 'Stripe', 'REST API'],
+      'Built and deployed a production licensing and ecommerce platform for digital pattern creators. Engineered the full backend using Node.js, Express, and MySQL on AWS RDS, and handled cloud deployment on AWS Lightsail with Nginx and PM2. Delivered product catalog management, tiered licensing, cart and checkout, an admin dashboard, and a customer portal. Hardened the system by resolving CORS issues, implementing SSL, and modularizing API routes to protect sensitive endpoints.',
+    tech: ['React', 'Node.js', 'Express', 'MySQL', 'AWS Lightsail', 'AWS RDS', 'Nginx', 'PM2'],
     github: 'https://github.com/Diwan01',
     demo: null,
   },
