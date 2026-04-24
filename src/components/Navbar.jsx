@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi'
 import { useTheme } from '../context/ThemeContext'
 
-const NAV_LINKS = ['About', 'Skills', 'Projects', 'Experience', 'Contact']
+const NAV_LINKS = ['About', 'Skills', 'Projects', 'Experience', 'Certifications', 'Contact']
 
 export default function Navbar() {
   const { dark, toggle } = useTheme()
