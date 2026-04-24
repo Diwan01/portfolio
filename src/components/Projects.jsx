@@ -6,7 +6,7 @@ const projects = [
     num: '01',
     title: 'Awn Creel — Digital Pattern Platform',
     description:
-      'Full-stack e-commerce platform for digital asset distribution, flexible license management, and secure payment processing for independent craft pattern creators.',
+      'Architected an end-to-end digital marketplace where independent craft designers publish, license, and sell downloadable pattern assets — featuring Stripe-integrated checkout, automated license enforcement, and a Supabase-backed catalog with row-level security policies.',
     tech: ['React', 'Node.js', 'Supabase', 'Stripe', 'REST API'],
     github: 'https://github.com/Diwan01',
     demo: null,
@@ -15,7 +15,7 @@ const projects = [
     num: '02',
     title: 'Homify — Nepal Housing Platform',
     description:
-      'Real estate platform for underserved rural regions in Nepal, with smart location scoring, structured property listings, and a fully normalized relational database.',
+      'Designed a housing discovery platform to address the lack of structured property data in rural Nepal — built on a fully normalized MySQL schema with complete ERD documentation, a location scoring engine for remote-area ranking, and a RESTful backend API serving listings across regions with limited digital infrastructure.',
     tech: ['MySQL', 'ERD Design', 'Backend API', 'Location Intelligence'],
     github: 'https://github.com/Diwan01',
     demo: null,
@@ -24,7 +24,7 @@ const projects = [
     num: '03',
     title: 'Homework Alert App',
     description:
-      'Android productivity app built in Kotlin delivering task scheduling, push notifications, and assignment tracking with local data persistence.',
+      'Shipped a native Android app in Kotlin that eliminates missed deadlines through a WorkManager-powered background scheduler, Room Database for offline-first persistence, and a precision notification system that surfaces reminders at user-defined intervals — with zero server dependency.',
     tech: ['Kotlin', 'Android', 'Room DB', 'WorkManager'],
     github: 'https://github.com/Diwan01',
     demo: null,
@@ -33,7 +33,7 @@ const projects = [
     num: '04',
     title: 'Huffman Compression Tool',
     description:
-      'Java implementation of Huffman coding achieving efficient lossless file compression through dynamic frequency analysis and binary tree construction.',
+      'Engineered a lossless file compression system in Java implementing the full Huffman coding pipeline — frequency table construction, min-heap priority queue processing, binary tree traversal, variable-length prefix encoding, and bit-level stream I/O — achieving measurable size reduction with exact data recovery.',
     tech: ['Java', 'Data Structures', 'Algorithms', 'File I/O'],
     github: 'https://github.com/Diwan01',
     demo: null,
