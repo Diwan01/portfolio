@@ -11,7 +11,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
+    const onScroll = () => setScrolled(window.scrollY > 24)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -23,48 +23,52 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200/80 dark:border-zinc-800/60 shadow-sm shadow-zinc-900/5'
+          ? 'bg-white/75 dark:bg-zinc-950/75 backdrop-blur-xl border-b border-zinc-200/60 dark:border-zinc-800/50'
           : 'bg-transparent'
       }`}
     >
       <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+        {/* Monogram badge */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+          className="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold tracking-tight transition-colors duration-200 shrink-0"
+          aria-label="Scroll to top"
         >
           DB
         </button>
 
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-1">
           {NAV_LINKS.map((link) => (
             <button
               key={link}
               onClick={() => scrollTo(link)}
-              className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-200"
+              className="relative px-3 py-1.5 text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 rounded-md hover:bg-zinc-100/70 dark:hover:bg-zinc-800/50 transition-all duration-150"
             >
               {link}
             </button>
           ))}
         </div>
 
-        <div className="flex items-center gap-2">
+        {/* Right: theme + mobile toggle */}
+        <div className="flex items-center gap-1.5">
           <button
             onClick={toggle}
             aria-label="Toggle theme"
-            className="p-2 rounded-lg text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800/60 transition-all duration-200"
+            className="p-2 rounded-md text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100/70 dark:hover:bg-zinc-800/50 transition-all duration-150"
           >
             <AnimatePresence mode="wait" initial={false}>
               <motion.span
                 key={dark ? 'sun' : 'moon'}
-                initial={{ opacity: 0, rotate: -30, scale: 0.8 }}
+                initial={{ opacity: 0, rotate: -20, scale: 0.85 }}
                 animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                exit={{ opacity: 0, rotate: 30, scale: 0.8 }}
-                transition={{ duration: 0.2 }}
+                exit={{ opacity: 0, rotate: 20, scale: 0.85 }}
+                transition={{ duration: 0.18 }}
                 className="block"
               >
-                {dark ? <FiSun size={16} /> : <FiMoon size={16} />}
+                {dark ? <FiSun size={15} /> : <FiMoon size={15} />}
               </motion.span>
             </AnimatePresence>
           </button>
@@ -72,23 +76,24 @@ export default function Navbar() {
           <button
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Toggle menu"
-            className="md:hidden p-2 rounded-lg text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800/60 transition-all duration-200"
+            className="md:hidden p-2 rounded-md text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100/70 dark:hover:bg-zinc-800/50 transition-all duration-150"
           >
-            {menuOpen ? <FiX size={18} /> : <FiMenu size={18} />}
+            {menuOpen ? <FiX size={17} /> : <FiMenu size={17} />}
           </button>
         </div>
       </nav>
 
+      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden border-t border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md"
+            transition={{ duration: 0.18, ease: [0.4, 0, 0.2, 1] }}
+            className="md:hidden overflow-hidden border-t border-zinc-200/60 dark:border-zinc-800/50 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl"
           >
-            <div className="px-6 py-5 flex flex-col gap-1">
+            <div className="px-4 py-3 flex flex-col gap-0.5">
               {NAV_LINKS.map((link) => (
                 <button
                   key={link}
