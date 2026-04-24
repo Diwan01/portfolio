@@ -63,10 +63,15 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.18, ease: [0.21, 0.47, 0.32, 0.98] }}
             className="md:col-span-2 space-y-2"
           >
-            {highlights.map(({ Icon, label }) => (
-              <div
+            {highlights.map(({ Icon, label }, i) => (
+              <motion.div
                 key={label}
-                className="group flex items-center gap-3 px-4 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors duration-200"
+                initial={{ opacity: 0, x: 12 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 + i * 0.07, ease: [0.21, 0.47, 0.32, 0.98] }}
+                whileHover={{ scale: 1.02, y: -1, transition: { duration: 0.15, ease: 'easeOut' } }}
+                className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors duration-200 cursor-default"
               >
                 <Icon
                   size={14}
@@ -75,7 +80,7 @@ export default function About() {
                 <span className="text-sm text-zinc-600 dark:text-zinc-300 leading-snug">
                   {label}
                 </span>
-              </div>
+              </motion.div>
             ))}
 
             <div className="px-4 py-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50">

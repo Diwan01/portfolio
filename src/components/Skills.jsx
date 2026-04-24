@@ -82,6 +82,11 @@ export default function Skills() {
                   <motion.span
                     key={skill}
                     variants={chipVariants}
+                    whileHover={{
+                      scale: 1.07,
+                      y: -2,
+                      transition: { duration: 0.14, ease: 'easeOut' },
+                    }}
                     className="px-3 py-1.5 rounded-lg text-[13px] font-medium border cursor-default select-none
                       border-zinc-200 dark:border-zinc-800
                       bg-white dark:bg-zinc-900
@@ -89,7 +94,7 @@ export default function Skills() {
                       hover:bg-indigo-50 dark:hover:bg-indigo-950/40
                       hover:border-indigo-200/80 dark:hover:border-indigo-700/60
                       hover:text-indigo-700 dark:hover:text-indigo-300
-                      transition-all duration-200"
+                      transition-colors duration-150"
                   >
                     {skill}
                   </motion.span>

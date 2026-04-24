@@ -72,8 +72,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.21, 0.47, 0.32, 0.98] }}
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.22, ease: 'easeOut' }}
+              whileHover={{ scale: 1.018, y: -5, transition: { duration: 0.2, ease: [0.25, 0.4, 0.25, 1] } }}
               className="group relative flex flex-col p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50
                 hover:border-indigo-200/70 dark:hover:border-indigo-800/60
                 hover:shadow-[0_8px_30px_-4px_rgba(99,102,241,0.08)] dark:hover:shadow-[0_8px_30px_-4px_rgba(99,102,241,0.12)]

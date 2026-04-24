@@ -69,7 +69,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45, delay: 0.22 }}
-            whileHover={{ y: -2 }}
+            whileHover={{ scale: 1.03, y: -1, transition: { duration: 0.15, ease: 'easeOut' } }}
             whileTap={{ scale: 0.97 }}
             className="shrink-0 self-start md:self-auto inline-flex items-center gap-2
               px-6 py-3 rounded-xl text-sm font-semibold text-white
@@ -95,7 +95,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.09 }}
-              whileHover={{ y: -3 }}
+              whileHover={{ scale: 1.02, y: -4, transition: { duration: 0.18, ease: [0.25, 0.4, 0.25, 1] } }}
               className="group flex flex-col gap-4 p-5 rounded-2xl
                 border border-zinc-200 dark:border-zinc-800
                 bg-white dark:bg-zinc-900/50

@@ -108,6 +108,7 @@ export default function Hero() {
         >
           <motion.button
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            whileHover={{ scale: 1.03, y: -1, transition: { duration: 0.15, ease: 'easeOut' } }}
             whileTap={{ scale: 0.97 }}
             className="w-full sm:w-auto px-7 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white text-sm font-semibold transition-colors duration-150 shadow-lg shadow-indigo-600/20 dark:shadow-indigo-600/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950"
           >
@@ -115,6 +116,7 @@ export default function Hero() {
           </motion.button>
           <motion.button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            whileHover={{ scale: 1.03, y: -1, transition: { duration: 0.15, ease: 'easeOut' } }}
             whileTap={{ scale: 0.97 }}
             className="w-full sm:w-auto px-7 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 text-sm font-semibold text-zinc-700 dark:text-zinc-300 bg-white/80 dark:bg-zinc-900/60 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 hover:border-zinc-300 dark:hover:border-zinc-600 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300 dark:focus-visible:ring-zinc-600 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950"
           >

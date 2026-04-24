@@ -97,7 +97,10 @@ export default function Experience() {
               {/* Timeline dot */}
               <div className="absolute -left-[25px] top-6 w-2.5 h-2.5 rounded-full bg-indigo-500 border-2 border-white dark:border-zinc-950 ring-2 ring-indigo-200 dark:ring-indigo-900/70" />
 
-              <div className="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors duration-200">
+              <motion.div
+                whileHover={{ scale: 1.015, y: -3, transition: { duration: 0.18, ease: [0.25, 0.4, 0.25, 1] } }}
+                className="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors duration-200"
+              >
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
                   <div>
                     <h3
@@ -132,7 +135,7 @@ export default function Experience() {
                 <span className={`inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium ${tagStyle[edu.tagColor]}`}>
                   {edu.tag}
                 </span>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
