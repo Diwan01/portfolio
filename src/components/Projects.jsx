@@ -31,11 +31,11 @@ const projects = [
   },
   {
     num: '04',
-    title: 'Huffman Compression Tool',
+    title: 'Huffman File Compressor',
     description:
-      'Engineered a lossless file compression system in Java implementing the full Huffman coding pipeline: frequency table construction, min-heap priority queue processing, binary tree traversal, variable-length prefix encoding, and bit-level stream I/O, achieving measurable size reduction with exact data recovery.',
-    tech: ['Java', 'Data Structures', 'Algorithms', 'File I/O'],
-    github: 'https://github.com/Diwan01',
+      'Engineered a lossless file compressor in Java 17 implementing the full Huffman pipeline: frequency analysis, min-heap tree construction, bit-packed prefix-free codes, and two-pass streaming I/O for O(1) memory regardless of file size. Designed a custom .huff binary format with magic header, version byte, and pre-order serialized tree, where the original-size field doubles as a truncation-corruption check. Ships with a CLI and a Swing desktop GUI (compress, decompress, edit, preview tabs); 23-test JUnit 5 suite covers empty, single-symbol, all-256-byte, and truncated-archive edge cases. Benchmarked against gzip: achieves 33 to 43% size reduction on text and source code with byte-exact restoration.',
+    tech: ['Java 17', 'Maven', 'Swing', 'JUnit 5', 'Algorithms', 'Data Structures', 'Bit Manipulation', 'File Format Design'],
+    github: 'https://github.com/Diwan01/huffman-file-compressor',
     demo: null,
   },
 ]
