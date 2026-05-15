@@ -6,14 +6,26 @@ const ROLES = ['Software Developer', 'IT Professional', 'Backend Engineer', 'Pro
 
 export default function Hero() {
   const [roleIdx, setRoleIdx] = useState(0)
+  const [spot, setSpot] = useState({ x: -9999, y: -9999, on: false })
 
   useEffect(() => {
     const id = setInterval(() => setRoleIdx((i) => (i + 1) % ROLES.length), 3000)
     return () => clearInterval(id)
   }, [])
 
+  const onMouseMove = (e) => {
+    const r = e.currentTarget.getBoundingClientRect()
+    setSpot({ x: e.clientX - r.left, y: e.clientY - r.top, on: true })
+  }
+
+  const onMouseLeave = () => setSpot((s) => ({ ...s, on: false }))
+
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
+    <section
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6"
+    >
 
       {/* Dot grid */}
       <div
@@ -21,6 +33,15 @@ export default function Hero() {
         style={{
           backgroundImage: 'radial-gradient(circle, rgba(113,113,122,0.22) 1px, transparent 1px)',
           backgroundSize: '28px 28px',
+        }}
+      />
+
+      {/* Cursor spotlight */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-500"
+        style={{
+          opacity: spot.on ? 1 : 0,
+          background: `radial-gradient(550px circle at ${spot.x}px ${spot.y}px, rgba(99,102,241,0.18), transparent 45%)`,
         }}
       />
 
