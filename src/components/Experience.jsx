@@ -8,7 +8,7 @@ const education = [
     period: '2024 to 2026',
     location: 'Boston, MA',
     tag: 'Graduated May 2026 · GPA 3.71',
-    tagColor: 'indigo',
+    tagColor: 'emerald',
     highlights: [
       'Focus: cloud infrastructure, databases, IT systems, and security',
       'Coursework: Networking, Data Management, IT Architecture, Information Security',
