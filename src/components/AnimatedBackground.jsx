@@ -7,7 +7,7 @@ export default function AnimatedBackground() {
       <motion.div
         className="absolute top-[-35%] left-[-25%] w-[700px] h-[700px] rounded-full
           blur-[180px]
-          bg-indigo-200/35 dark:bg-indigo-600/22"
+          bg-indigo-400/55 dark:bg-indigo-600/22"
         animate={{ x: [0, 100, -50, 0], y: [0, 80, 120, 0] }}
         transition={{ duration: 24, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -16,7 +16,7 @@ export default function AnimatedBackground() {
       <motion.div
         className="absolute bottom-[-40%] right-[-25%] w-[800px] h-[800px] rounded-full
           blur-[180px]
-          bg-violet-200/30 dark:bg-purple-700/20"
+          bg-violet-400/50 dark:bg-purple-700/20"
         animate={{ x: [0, -100, 40, 0], y: [0, -60, -120, 0] }}
         transition={{ duration: 30, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -25,7 +25,7 @@ export default function AnimatedBackground() {
       <motion.div
         className="absolute top-[40%] left-[45%] w-[500px] h-[500px] rounded-full
           blur-[160px]
-          bg-sky-200/20 dark:bg-fuchsia-700/12"
+          bg-sky-400/35 dark:bg-fuchsia-700/12"
         animate={{ x: [0, 80, -80, 0], y: [0, 50, -50, 0] }}
         transition={{ duration: 26, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -35,7 +35,7 @@ export default function AnimatedBackground() {
         className="absolute inset-0 pointer-events-none dark:opacity-0 transition-opacity duration-500"
         style={{
           background:
-            'radial-gradient(ellipse 90% 80% at 50% 50%, transparent 40%, rgba(250,250,250,0.85) 100%)',
+            'radial-gradient(ellipse 95% 85% at 50% 50%, transparent 50%, rgba(250,250,250,0.65) 100%)',
         }}
       />
 
