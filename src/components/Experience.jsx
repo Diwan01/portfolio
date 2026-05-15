@@ -7,7 +7,7 @@ const education = [
     degree: 'B.S. Information Technology',
     period: '2024 to 2026',
     location: 'Boston, MA',
-    tag: 'Expected May 2026',
+    tag: 'Graduated May 2026 · GPA 3.71',
     tagColor: 'indigo',
     highlights: [
       'Focus: cloud infrastructure, databases, IT systems, and security',
